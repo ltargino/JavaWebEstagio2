@@ -1,0 +1,63 @@
+
+# Criado por https://www.gitignore.io/api/eclipse
+
+### Eclipse ###
+
+.metadata
+bin /
+tmp /
+* .tmp
+* .bak
+* .swp
+* ~ .nib
+propriedades locais
+.configurações/
+.loadpath
+.recommenders
+
+# Construtores de ferramentas externas
+.externalToolBuilders /
+
+# Configurações de inicialização do Eclipse armazenadas localmente
+*.lançamento
+
+# PyDev específico (Python IDE para Eclipse)
+* .pydevproject
+
+# CDT específico (C / C ++ Development Tooling)
+.cproject
+
+# Processador de anotação Java (APT)
+Caminho de fábrica
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.alvo
+
+# Tern plugin
+projeto .tern
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders /
+
+# Scala IDE específico (desenvolvimento Scala e Java para o Eclipse)
+.cache-main
+.scala_dependencies
+folha de trabalho
+
+### Eclipse Patch ###
+# Eclipse Core		
+.projeto
+
+# JDT-specific (Eclipse Java Development Tools)		
+.classpath
+
+# Fim de https://www.gitignore.io/api/eclipse
