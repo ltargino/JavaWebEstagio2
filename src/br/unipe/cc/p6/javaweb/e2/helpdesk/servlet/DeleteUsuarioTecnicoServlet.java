@@ -14,7 +14,7 @@ import br.unipe.cc.p6.javaweb.e2.helpdesk.service.UsuarioTecnicoService;
 public class DeleteUsuarioTecnicoServlet extends HttpServlet {
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		UsuarioTecnicoService service = new UsuarioTecnicoService();
 		
@@ -24,7 +24,7 @@ public class DeleteUsuarioTecnicoServlet extends HttpServlet {
 		
 		service.excluir(tecnico);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 
 	}
 	

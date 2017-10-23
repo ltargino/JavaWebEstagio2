@@ -22,7 +22,7 @@
 		    <div class="row">
 		      <div class="input-field col s12">
 		        <input id="id" name="id" type="text">
-		        <label for="id">E-mail</label>
+		        <label for="id">ID</label>
 		      </div>
 		    </div>
 			<div class="row">

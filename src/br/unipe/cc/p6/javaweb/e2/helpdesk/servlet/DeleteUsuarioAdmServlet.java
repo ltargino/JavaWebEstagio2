@@ -14,7 +14,7 @@ import br.unipe.cc.p6.javaweb.e2.helpdesk.service.UsuarioAdmService;
 public class DeleteUsuarioAdmServlet extends HttpServlet {
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		UsuarioAdmService service = new UsuarioAdmService();
 		
@@ -24,7 +24,7 @@ public class DeleteUsuarioAdmServlet extends HttpServlet {
 		
 		service.excluir(adm);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 		
 	}
 	

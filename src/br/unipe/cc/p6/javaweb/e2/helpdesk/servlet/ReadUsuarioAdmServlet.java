@@ -25,7 +25,7 @@ public class ReadUsuarioAdmServlet extends HttpServlet {
 		
 		req.setAttribute("adm", adm);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("");
+		RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
 		
 		rd.forward(req, resp);
 				

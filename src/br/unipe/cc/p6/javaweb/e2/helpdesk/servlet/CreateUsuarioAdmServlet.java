@@ -19,9 +19,9 @@ public class CreateUsuarioAdmServlet extends HttpServlet {
 		UsuarioAdm adm = new UsuarioAdm();
 		UsuarioAdmService service = new UsuarioAdmService();
 		
-		String nome = req.getParameter("nome");
-		String email = req.getParameter("email");
-		String senha = req.getParameter("senha");
+		String nome = req.getParameter("add_nome");
+		String email = req.getParameter("add_email");
+		String senha = req.getParameter("add_senha");
 		
 		adm.setNome(nome);
 		adm.setEmail(email);
@@ -29,7 +29,7 @@ public class CreateUsuarioAdmServlet extends HttpServlet {
 		
 		service.inserir(adm);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 	}
 	
 	

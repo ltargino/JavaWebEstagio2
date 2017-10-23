@@ -18,7 +18,7 @@ public abstract class AbstractDao<Entity extends AbstractEntity>{
 	}
 	
 	public AbstractDao(){
-		
+		this.setManager(EntityManagerUtil.getEntityManager());
 	}
 	
 	public void setManager(EntityManager manager){

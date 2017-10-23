@@ -32,8 +32,22 @@ public class UpdateUsuarioAdmServlet extends HttpServlet {
 		
 		service.atualizar(adm);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 		
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		UsuarioAdmService service = new UsuarioAdmService();
+		
+		int id = Integer.parseInt(req.getParameter("id"));
+		
+		UsuarioAdm usuario_edit = service.buscar(new Long(id));		
+		
+		req.getSession().setAttribute("usuario_edit", usuario_edit);
+		
+		resp.sendRedirect("editar_usuario_adm.jsp");
 	}
 	
 }

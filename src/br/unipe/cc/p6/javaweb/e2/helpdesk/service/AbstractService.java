@@ -54,7 +54,7 @@ public abstract class AbstractService<DAO extends AbstractDao<Entity>, Entity ex
 	
 	}
 	
-	public List<Entity> listarCursos(){
+	public List<Entity> listar(){
 		EntityManager manager = fac.createEntityManager();
 		List<Entity> movimentos = new ArrayList<Entity>();
 		try{

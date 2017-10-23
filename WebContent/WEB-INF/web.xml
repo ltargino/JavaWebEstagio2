@@ -5,6 +5,7 @@
     <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
 
+  <!-- Login & Home Servlet -->
   <servlet>
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.LoginServlet</servlet-class>
@@ -12,6 +13,316 @@
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/logar</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+
+  <!-- Create Servlets -->
+  <servlet>
+    <servlet-name>CreateDepartamentoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateDepartamentoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateDepartamentoServlet</servlet-name>
+    <url-pattern>/create_departamento</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CreateNotificacaoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateNotificacaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateNotificacaoServlet</servlet-name>
+    <url-pattern>/create_notificacao</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateSLAServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateSLAServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateSLAServlet</servlet-name>
+    <url-pattern>/create_sla</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateTicketServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateTicketServlet</servlet-name>
+    <url-pattern>/create_ticket</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateUsuarioAdmServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateUsuarioAdmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateUsuarioAdmServlet</servlet-name>
+    <url-pattern>/create_usuario_adm</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateUsuarioClienteServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateUsuarioClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateUsuarioClienteServlet</servlet-name>
+    <url-pattern>/create_usuario_cliente</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateUsuarioTecnicoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateUsuarioTecnicoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateUsuarioTecnicoServlet</servlet-name>
+    <url-pattern>/create_usuario_tecnico</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateUsuarioServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.CreateUsuarioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateUsuarioServlet</servlet-name>
+    <url-pattern>/create_usuario</url-pattern>
+  </servlet-mapping>
+
+  <!-- Delete Servlets -->
+  <servlet>
+    <servlet-name>DeleteDepartamentoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteDepartamentoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteDepartamentoServlet</servlet-name>
+    <url-pattern>/delete_departamento</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteNotificacaoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteNotificacaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteNotificacaoServlet</servlet-name>
+    <url-pattern>/delete_notificacao</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteSLAServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteSLAServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteSLAServlet</servlet-name>
+    <url-pattern>/delete_sla</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteTicketServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteTicketServlet</servlet-name>
+    <url-pattern>/delete_ticket</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteUsuarioAdmServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteUsuarioAdmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUsuarioAdmServlet</servlet-name>
+    <url-pattern>/delete_usuario_adm</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteUsuarioClienteServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteUsuarioClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUsuarioClienteServlet</servlet-name>
+    <url-pattern>/delete_usuario_cliente</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteUsuarioServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteUsuarioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUsuarioServlet</servlet-name>
+    <url-pattern>/delete_usuario</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteUsuarioTecnicoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.DeleteUsuarioTecnicoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUsuarioTecnicoServlet</servlet-name>
+    <url-pattern>/delete_usuario_tecnico</url-pattern>
+  </servlet-mapping>
+
+  <!-- Read Servlets -->
+  <servlet>
+    <servlet-name>ReadDepartamentoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadDepartamentoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadDepartamentoServlet</servlet-name>
+    <url-pattern>/read_departamento</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ReadNotificacaoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadNotificacaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadNotificacaoServlet</servlet-name>
+    <url-pattern>/read_notificacao</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ReadSLAServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadSLAServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadSLAServlet</servlet-name>
+    <url-pattern>/read_sla</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReadTicketServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadTicketServlet</servlet-name>
+    <url-pattern>/read_ticket</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReadUsuarioAdmServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadUsuarioAdmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadUsuarioAdmServlet</servlet-name>
+    <url-pattern>/read_usuario_adm</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>ReadUsuarioClienteServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadUsuarioClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadUsuarioClienteServlet</servlet-name>
+    <url-pattern>/read_usuario_cliente</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReadUsuarioServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadUsuarioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadUsuarioServlet</servlet-name>
+    <url-pattern>/read_usuario</url-pattern>
+  </servlet-mapping>  
+
+  <servlet>
+    <servlet-name>ReadUsuarioTecnicoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.ReadUsuarioTecnicoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadUsuarioTecnicoServlet</servlet-name>
+    <url-pattern>/read_usuario_tecnico</url-pattern>
+  </servlet-mapping> 
+ 
+  <!-- Update Servlets -->
+  <servlet>
+    <servlet-name>UpdateDepartamentoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateDepartamentoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateDepartamentoServlet</servlet-name>
+    <url-pattern>/update_departamento</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateNotificacaoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateNotificacaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateNotificacaoServlet</servlet-name>
+    <url-pattern>/update_notificacao</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateSLAServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateSLAServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateSLAServlet</servlet-name>
+    <url-pattern>/update_sla</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateTicketServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateTicketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateTicketServlet</servlet-name>
+    <url-pattern>/update_ticket</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateUsuarioAdmServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateUsuarioAdmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUsuarioAdmServlet</servlet-name>
+    <url-pattern>/update_usuario_adm</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateUsuarioClienteServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateUsuarioClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUsuarioClienteServlet</servlet-name>
+    <url-pattern>/update_usuario_cliente</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateUsuarioServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateUsuarioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUsuarioServlet</servlet-name>
+    <url-pattern>/update_usuario</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateUsuarioTecnicoServlet</servlet-name>
+    <servlet-class>br.unipe.cc.p6.javaweb.e2.helpdesk.servlet.UpdateUsuarioTecnicoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUsuarioTecnicoServlet</servlet-name>
+    <url-pattern>/update_usuario_tecnico</url-pattern>
   </servlet-mapping>
 
 </web-app>
