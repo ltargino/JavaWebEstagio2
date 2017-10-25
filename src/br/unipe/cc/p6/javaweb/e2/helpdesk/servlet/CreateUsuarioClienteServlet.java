@@ -20,18 +20,18 @@ public class CreateUsuarioClienteServlet extends HttpServlet {
 		UsuarioCliente cliente = new UsuarioCliente();
 		UsuarioClienteService service = new UsuarioClienteService();
 		
-		String nome = req.getParameter("nome");
-		String email = req.getParameter("email");
-		String senha = req.getParameter("senha");
+		String nome = req.getParameter("add_nome");
+		String email = req.getParameter("add_email");
+		String senha = req.getParameter("add_senha");
 		
 		cliente.setNome(nome);
 		cliente.setEmail(email);
 		cliente.setSenha(senha);
-		cliente.setDepartamento(new Departamento());
+		//cliente.setDepartamento(new Departamento());
 		
 		service.inserir(cliente);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 		
 	}
 	

@@ -30,13 +30,27 @@ public class UpdateUsuarioClienteServlet extends HttpServlet {
 		cliente.setNome(nome);
 		cliente.setEmail(email);
 		cliente.setSenha(senha);
-		cliente.setDepartamento(new Departamento());
+		//cliente.setDepartamento(new Departamento());
 		
 		service.atualizar(cliente);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 		
+	}
+	
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		UsuarioClienteService service = new UsuarioClienteService();
+		
+		int id = Integer.parseInt(req.getParameter("id"));
+		
+		UsuarioCliente usuario_edit = service.buscar(new Long(id));		
+		
+		req.getSession().setAttribute("usuario_edit", usuario_edit);
+		
+		resp.sendRedirect("editar_usuario_cliente.jsp");
 	}
 	
 }

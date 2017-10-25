@@ -9,9 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.unipe.cc.p6.javaweb.e2.helpdesk.model.Ticket;
 import br.unipe.cc.p6.javaweb.e2.helpdesk.model.UsuarioAdm;
 import br.unipe.cc.p6.javaweb.e2.helpdesk.model.UsuarioCliente;
 import br.unipe.cc.p6.javaweb.e2.helpdesk.model.UsuarioTecnico;
+import br.unipe.cc.p6.javaweb.e2.helpdesk.service.TicketService;
 import br.unipe.cc.p6.javaweb.e2.helpdesk.service.UsuarioAdmService;
 import br.unipe.cc.p6.javaweb.e2.helpdesk.service.UsuarioClienteService;
 import br.unipe.cc.p6.javaweb.e2.helpdesk.service.UsuarioTecnicoService;
@@ -36,6 +38,11 @@ public class HomeServlet extends HttpServlet {
 		List<UsuarioTecnico> usuarios_tecnicos = service_tecnicos.listar();
 		
 		req.setAttribute("usuarios_tecnicos", usuarios_tecnicos);		
+		
+		TicketService service_tickets = new TicketService();
+		List<Ticket> tickets = service_tickets.listar();
+		
+		req.setAttribute("tickets", tickets);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
 		

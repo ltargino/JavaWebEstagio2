@@ -29,7 +29,7 @@
        	<td><%= usuario.getNome() %></td>
        	<td><%= usuario.getEmail() %></td>
      	<td>
-     		<a href="#"><i class="material-icons">edit</i></a>
+     		<a href='update_usuario_cliente?id=<%=usuario.getId()%>'><i class="material-icons">edit</i></a>
      		<a href='delete_usuario_cliente?id=<%=usuario.getId()%>' onclick="return confirm('Deseja realmente excluir?');"><i class="material-icons" style="color: #e53935">delete</i></a>
      	</td>
      </tr>

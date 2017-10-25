@@ -33,8 +33,23 @@ public class UpdateUsuarioTecnicoServlet extends HttpServlet {
 		
 		service.atualizar(tecnico);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 		
+	}
+	
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		UsuarioTecnicoService service = new UsuarioTecnicoService();
+		
+		int id = Integer.parseInt(req.getParameter("id"));
+		
+		UsuarioTecnico usuario_edit = service.buscar(new Long(id));		
+		
+		req.getSession().setAttribute("usuario_edit", usuario_edit);
+		
+		resp.sendRedirect("editar_usuario_tecnico.jsp");
 	}
 	
 }

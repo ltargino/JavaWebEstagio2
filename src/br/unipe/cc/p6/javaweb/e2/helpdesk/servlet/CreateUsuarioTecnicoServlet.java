@@ -19,9 +19,9 @@ public class CreateUsuarioTecnicoServlet extends HttpServlet {
 		UsuarioTecnico tecnico = new UsuarioTecnico();
 		UsuarioTecnicoService service = new UsuarioTecnicoService();
 
-		String nome = req.getParameter("nome");
-		String email = req.getParameter("email");
-		String senha = req.getParameter("senha");
+		String nome = req.getParameter("add_nome");
+		String email = req.getParameter("add_email");
+		String senha = req.getParameter("add_senha");
 		
 		tecnico.setNome(nome);
 		tecnico.setEmail(email);
@@ -30,7 +30,7 @@ public class CreateUsuarioTecnicoServlet extends HttpServlet {
 		
 		service.inserir(tecnico);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 		
 	}
 	

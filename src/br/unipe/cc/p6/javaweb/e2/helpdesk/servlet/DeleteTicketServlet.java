@@ -14,7 +14,7 @@ import br.unipe.cc.p6.javaweb.e2.helpdesk.service.TicketService;
 public class DeleteTicketServlet extends HttpServlet {
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		TicketService service = new TicketService();
 
@@ -24,7 +24,7 @@ public class DeleteTicketServlet extends HttpServlet {
 		
 		service.excluir(ticket);
 		
-		resp.sendRedirect("");
+		resp.sendRedirect("home");
 		
 	}
 	

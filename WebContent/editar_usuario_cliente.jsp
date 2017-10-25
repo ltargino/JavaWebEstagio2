@@ -1,5 +1,5 @@
- <%@ page import="
- 			br.unipe.cc.p6.javaweb.e2.helpdesk.model.Usuario" %>
+ <%@ page import="br.unipe.cc.p6.javaweb.e2.helpdesk.model.Usuario,
+ 				  br.unipe.cc.p6.javaweb.e2.helpdesk.model.UsuarioCliente" %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,9 +20,10 @@
 
 	<body>
 
-	<% 
-		Usuario usuario = (Usuario)request.getSession().getAttribute("usuario");
-	%>
+		<% 
+			Usuario usuario = (Usuario)request.getSession().getAttribute("usuario");
+			UsuarioCliente usuario_edit = (UsuarioCliente)request.getSession().getAttribute("usuario_edit");
+		%>
 
 		<nav class="nav-extended teal darken-1">
 		  <div class="nav-wrapper">
@@ -37,27 +38,46 @@
 		      <li><a href="logout">Logout</a></li>
 		    </ul>
 		  </div>
-		  <div class="nav-content">
-		    <ul class="tabs tabs-transparent">
-		      <li class="tab"><a href="#ticket">Ticket</a></li>
-		      <li class="tab"><a href="#usuarios_cliente">Usuários Clientes</a></li>
-		      <li class="tab"><a href="#usuarios_tecnico">Usuários Técnicos</a></li>
-		      <li class="tab"><a href="#usuarios_adm">Usuários Administradores</a></li>
-		    </ul>
-		  </div>
 		</nav>
-		<div id="ticket" class="col s12"><jsp:include page="listagem_tickets.jsp"></jsp:include></div>
-		<div id="usuarios_cliente" class="col s12"><jsp:include page="listagem_usuario_cliente.jsp"/></div>
-		<div id="usuarios_tecnico" class="col s12"><jsp:include page="listagem_usuario_tecnico.jsp"/></div>
-		<div id="usuarios_adm" class="col s12"><jsp:include page="listagem_usuario_adm.jsp"/></div>
 
+		<form action="update_usuario_cliente" method="post">
+			
+			<input type="hidden" id="id" name="id" value='<%= usuario_edit.getId() %>'/>
+			
+			<div class="row">
+				<div class="input-field cal s12">
+					<input type="text" id="nome" name="nome" value='<%= usuario_edit.getNome() %>'/>
+					<label for="nome">Nome</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field cal s12">
+					<input type="text" id="email" name="email" value='<%= usuario_edit.getEmail() %>'/>
+					<label for="email">E-mail</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field cal s12">
+					<input type="password" id="senha" name="senha" value='<%= usuario_edit.getSenha() %>'/>
+					<label for="senha">Senha</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<button type="submit" class="waves-effect waves-light btn col s12">Salvar</button>
+			</div>
+			
+		</form>
+		
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 		<script type="text/javascript">
 			$(".button-collapse").sideNav();
 		</script>
-		
+
 	</body>
 
 </html>
