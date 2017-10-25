@@ -54,17 +54,17 @@
 			<div class="row">
 				<div class="input-field cal s12">
 					<input type="text" id="descricao" name="descricao" value='<%= ticket.getDescricao() %>'/>
-					<label for="descricao">Descrição</label>
+					<label for="descricao">Descriï¿½ï¿½o</label>
 				</div>
 			</div>
 			
 			<div class="row">
 			  <div class="input-field col s12">
 			    <select id="status" name="status">
-			      <option value="0">Aberto</option>
-			      <option value="1">Resolvido</option>
-			      <option value="2">Fechado</option>
-			      <option value="3">Pendente</option>
+			      <option value="0" <%= ticket.getStatus() == Status.values()[0] ? "selecetd" : "" %> >Aberto</option>
+			      <option value="1" <%= ticket.getStatus() == Status.values()[1] ? "selecetd" : "" %> >Resolvido</option>
+			      <option value="2" <%= ticket.getStatus() == Status.values()[2] ? "selecetd" : "" %> >Fechado</option>
+			      <option value="3" <%= ticket.getStatus() == Status.values()[3] ? "selecetd" : "" %> >Pendente</option>
 			    </select>
 			    <label>Status</label>
 			  </div>
@@ -73,10 +73,10 @@
 			<div class="row">
 			  <div class="input-field col s12">
 			    <select id="prioridade" name="prioridade">
-			      <option value="0">Alta</option>
-			      <option value="1">Media</option>
-			      <option value="2">Baixa</option>
-			      <option value="3">Urgente</option>
+			      <option value="0" <%= ticket.getPrioridade() == Prioridade.values()[0] ? "selecetd" : "" %> >Alta</option>
+			      <option value="1" <%= ticket.getPrioridade() == Prioridade.values()[1] ? "selecetd" : "" %> >Media</option>
+			      <option value="2" <%= ticket.getPrioridade() == Prioridade.values()[2] ? "selecetd" : "" %> >Baixa</option>
+			      <option value="3" <%= ticket.getPrioridade() == Prioridade.values()[3] ? "selecetd" : "" %> >Urgente</option>
 			    </select>
 			    <label>Prioridade</label>
 			  </div>
@@ -91,7 +91,7 @@
 			      <% } %>
 			    
 			    </select>
-			    <label>Usuário</label>
+			    <label>Usuï¿½rio</label>
 			  </div>			
 		    </div>
 			
